@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Burguers</string>
+    <string name="tusuario">Usuario</string>
+    <string name="tsenha">Senha</string>
+</resources>
