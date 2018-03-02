@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView senha = (TextView) findViewById(R.id.tsenha);
                 String tusuario = usuario.getText().toString();
                 String tsenha = senha.getText().toString();
-                if (usuario.equals("felipe")&& senha.equals("123")){
+                if (tusuario.equals("felipe")&& tsenha.equals("123")){
                     alert("Login successfully completed!");
                 }else
                     alert("Incorrect username or password! ");
