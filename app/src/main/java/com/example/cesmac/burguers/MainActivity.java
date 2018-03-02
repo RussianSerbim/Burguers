@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cesmac.burguers.Models.Produto;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,13 +26,10 @@ public class MainActivity extends AppCompatActivity {
                 TextView senha = (TextView) findViewById(R.id.tsenha);
                 String tusuario = usuario.getText().toString();
                 String tsenha = senha.getText().toString();
-
-                if (usuario.equals("Felipe")&& senha.equals("123")){
+                if (usuario.equals("felipe")&& senha.equals("123")){
                     alert("Login successfully completed!");
-                }
-                else
+                }else
                     alert("Incorrect username or password! ");
-
             }
         });
     }
@@ -37,4 +38,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
 
     }
+    ArrayList<Produto> lista = new ArrayList<Produto>();
+
 }
