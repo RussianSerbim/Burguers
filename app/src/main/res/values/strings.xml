@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Burguers</string>
-    <string name="tusuario">Usuario</string>
-    <string name="tsenha">Senha</string>
+    <string name="app_name" translatable="false">Burguers</string>
+    <string name="tusuario" translatable="false">Usuario</string>
+    <string name="tsenha" translatable="false">Senha</string>
 </resources>

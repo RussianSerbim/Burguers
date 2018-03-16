@@ -1,18 +1,27 @@
 package com.example.cesmac.burguers.Models;
 
 
-public class Produto {
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
 
-        private int foto;
-        private String produto;
-        private double preco;
+import java.io.Serializable;
 
-        public Produto (int foto, String produto, double preco){
-            this.foto = foto;
-            this.produto = produto;
-            this.preco = preco;
+public class Produto implements Serializable {
 
-        }
+    private int foto;
+    private String produto;
+    private double preco;
+    private boolean check;
+
+
+    public Produto(int foto, String produto, int preco, boolean b) {
+        this.foto = foto;
+        this.produto = produto;
+        this.preco = preco;
+        if (check) this.check = true;
+        else this.check = false;
+    }
 
     public int getFoto() {
         return foto;
@@ -37,4 +46,9 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return null;
+    }
 }
+
