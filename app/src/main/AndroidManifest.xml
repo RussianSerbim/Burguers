@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PedidosActivity" />
-        <activity android:name=".resultado"></activity>
+        <activity android:name=".resultado" />
+        <activity android:name=".cadastro"></activity>
     </application>
 
 </manifest>
