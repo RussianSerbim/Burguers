@@ -2,4 +2,10 @@
     <string name="app_name" translatable="false">Burguers</string>
     <string name="tusuario" translatable="false">Usuario</string>
     <string name="tsenha" translatable="false">Senha</string>
+    <string name="facebook_app_id">[APP_ID]</string>
+    <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
+    <string name="menu_aberto">Menu Aberto</string>
+    <string name="menu_fechado">Menu Fechado</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

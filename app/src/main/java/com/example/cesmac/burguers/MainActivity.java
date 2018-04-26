@@ -1,6 +1,7 @@
 package com.example.cesmac.burguers;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final Intent intent = new Intent(MainActivity.this,PedidosActivity.class);
         setContentView(R.layout.activity_main);
+        SharedPreferences preferences = getSharedPreferences("app",MODE_PRIVATE);
+        if (!preferences.getString("tusuario", "").equals("")) {
+            startActivity(intent);
+        }
         Button btlogin = (Button) findViewById(R.id.btlogin);
         btlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,13 +36,18 @@ public class MainActivity extends AppCompatActivity {
                 TextView senha = (TextView) findViewById(R.id.tsenha);
                 String tusuario = usuario.getText().toString();
                 String tsenha = senha.getText().toString();
-                if (tusuario.equals("felipeserbim@hotmail.com")&& tsenha.equals("123456")){
+                if (tusuario.equals("felipe")&& tsenha.equals("123")){
                     alert("Login successfully completed!");
                     startActivity(intent);
+                    SharedPreferences preferences = getSharedPreferences("app",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("tusuario", "felipe");
+                    editor.apply();
                 }else
                     alert("Incorrect username or password! ");
             }
         });
+
     }
 
     @Override
